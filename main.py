@@ -14,18 +14,23 @@ def standaardprijs(distance):
     return price
 
 def ritprijs(age, weekend, distance):
+    # Calculate standard price before performing any of the other calculations
     standardPrice = standaardprijs(distance)
 
+    # Check if the travelers age is between 11 and 65 years in and calculate their price accordingly
     if age >= 12 and age < 65:
+        # Check if it's weekend and return the correct price
         if weekend:
             return standardPrice * 0.6
 
         return standardPrice
+    # If the travelers age is below 12 or 65 perform these calculations
     else:
+        # Check if it's weekend and return the correct price
         if weekend:
             return standardPrice * 0.65
-        else:
-            return standardPrice * 0.7
+        
+        return standardPrice * 0.7
 
 
 # !TESTS!
