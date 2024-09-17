@@ -13,5 +13,20 @@ def standaardprijs(distance):
     # Return the calculated price of the travel
     return price
 
+def ritprijs(age, weekend, distance):
+    standardPrice = standaardprijs(distance)
+
+    if age >= 12 and age < 65:
+        if weekend:
+            return standardPrice * 0.6
+
+        return standardPrice
+    else:
+        if weekend:
+            return standardPrice * 0.65
+        else:
+            return standardPrice * 0.7
+
+
 # !TESTS!
-print(standaardprijs(int(input("Travel Distance: "))))
+print(ritprijs(int(input("Age: ")), bool(input("Weekend: ")), int(input("Distance: "))))
