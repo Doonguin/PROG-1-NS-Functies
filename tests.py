@@ -1,5 +1,4 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
+# These functions were made by Tygo van Zon, your go to programmer for websites and discord bots
 
 import traceback, collections
 
