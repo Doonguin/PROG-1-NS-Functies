@@ -4,9 +4,9 @@ def standaardprijs(distance):
     if distance < 0:
         distance = 0
     
-    # Check if the distance is equal to or more than 50km and calculate accordingly
-    if distance >= 50:
-        price = 15 + ((distance - 50) * 0.60)
+    # Check if the distance is greater than 50km and calculate accordingly
+    if distance > 50:
+        price = 15 + (distance * 0.60)
     else:
         price = distance * 0.80
 
